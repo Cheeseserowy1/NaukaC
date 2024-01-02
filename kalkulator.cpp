@@ -1,52 +1,29 @@
-﻿
-
 #include <iostream>
 using namespace std;
 
-void kalkulacja();
-
-int main()
-{
-    cout << "Kalkulator made by Cheeseserowy1" << endl;
-    cout << "" << endl;
-    cout << "" << endl;
-    kalkulacja();
-}
-
-
-void kalkulacja() {
-    int a;
-    int b;
-    string wybor;
-
-    cout << "Podaj A: ";
-    cin >> a;
+int main() {
+    cout << "Kalkulator made by Cheeseserowy1 -- Inprowed by GRATHRRAM" << endl;
     
-    cout << "Podaj B: ";
-    cin >> b;
+    int liczba1,liczba2;
+    char wybor;
 
-    cout << "Podaj dzialanie: ";
+    cout << "liczba 1: ";
+    cin >> liczba1;
+    
+    cout << "liczba 2: ";
+    cin >> liczba2;
+
+    cout << "Wybiez dzialanie: ";
     cin >> wybor;
 
-    if (wybor == "+") {
-        a = a + b;
-    }
-    else if (wybor == "-") {
-        a = a - b;
-    }
-    else if (wybor == "*") {
-        a = a * b;
-    }
-    else if (wybor == "/")
-    {
-        a = a / b;
-    }
-    else
-    {
-        cout << "Nie ma takiego działania w tym programie";
+    if      (wybor == '+') liczba1 = liczba1 + liczba2;
+    else if (wybor == '-') liczba1 = liczba1 - liczba2;
+    else if (wybor == '*') liczba1 = liczba1 * liczba2;
+    else if (wybor == '/') liczba1 = liczba1 / liczba2;
+    else {
+        cout << "Nie ma takiego działania w tym programie" << endl;
         return;
     }
 
-    cout << a;
-        
+    cout << "Wynik: " << liczba1 << endl;
 }
