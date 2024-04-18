@@ -1,31 +1,21 @@
-﻿// nauka.cpp : Ten plik zawiera funkcję „main”. W nim rozpoczyna się i kończy wykonywanie programu.
-//
-
 #include <iostream>
 using namespace std;
-void banknoty(int liczba);
-int a = 0;
-int b = 0;
+void banknot();
 
-int main()
-{
-	cout << "Podaj liczbe ile ma sie wydrukowac banknotow 100 zlotowych: " << endl;
-	cin >> a;
-	banknoty(a);
+int main() {
+	cout << "Podaj liczbe banknotow do wydrukowania: " << endl;
+    size_t liczba;
+    cin >> liczba;
+
+    for(size_t i = 0; i < liczba; i++) banknot();
 
 	return 0;
 }
 
-void banknoty(int a) {
-	while (b < a){
-		b++;
-	
-		cout << "Wydrukowano: " + b << endl;
-		cout << "=========================" << endl;
-		cout << "|        Banknot        |" << endl;
-		cout << "|          100          |" << endl;
-		cout << "|                       |" << endl;
-		cout << "=========================" << endl;
-	}
+void banknot() {
+	cout << "=========================" << endl;
+	cout << "|        Banknot        |" << endl;
+	cout << "|          100          |" << endl;
+	cout << "|                       |" << endl;
+	cout << "=========================" << endl << endl;
 }
-
